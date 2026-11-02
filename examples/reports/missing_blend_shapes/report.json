@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "status": "fail",
+  "summary": {
+    "errors": 2,
+    "warnings": 0,
+    "info": 1,
+    "checks": 5
+  },
+  "source": {
+    "producer": "blender",
+    "producer_version": "5.2.3 LTS",
+    "asset_name": "ordered_slots",
+    "source_file": "ordered_slots.fbx",
+    "artifact_sha256": "df4b9bf93705fd3e5393d52f566b39135d0c23ed611f1b02d4a7cf232a52ff4e"
+  },
+  "target": {
+    "producer": "unity",
+    "producer_version": "2022.3.22f1",
+    "asset_name": "ordered_slots",
+    "source_file": "ordered_slots.fbx",
+    "artifact_sha256": "df4b9bf93705fd3e5393d52f566b39135d0c23ed611f1b02d4a7cf232a52ff4e"
+  },
+  "tolerances": {
+    "absolute_m": 0.001,
+    "relative": 0.01
+  },
+  "checks": [
+    {
+      "category": "identity",
+      "subject": "FBX",
+      "status": "pass",
+      "detail": "SHA-256 matches",
+      "expected": "df4b9bf93705fd3e5393d52f566b39135d0c23ed611f1b02d4a7cf232a52ff4e",
+      "actual": "df4b9bf93705fd3e5393d52f566b39135d0c23ed611f1b02d4a7cf232a52ff4e"
+    },
+    {
+      "category": "dimensions",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "X / Y / Z in meters, Unity axes",
+      "expected": [
+        1.0,
+        2.0,
+        0.6000000238418579
+      ],
+      "actual": [
+        1,
+        2,
+        0.6
+      ]
+    },
+    {
+      "category": "bones",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "Source bone hierarchy; import wrappers ignored",
+      "expected": [
+        {
+          "name": "Base",
+          "parent": null
+        },
+        {
+          "name": "Chest",
+          "parent": "Base"
+        },
+        {
+          "name": "Head",
+          "parent": "Chest"
+        }
+      ],
+      "actual": [
+        {
+          "name": "ordered_slots",
+          "parent": null
+        },
+        {
+          "name": "Rig",
+          "parent": "ordered_slots"
+        },
+        {
+          "name": "Base",
+          "parent": "Rig"
+        },
+        {
+          "name": "Chest",
+          "parent": "Base"
+        },
+        {
+          "name": "Head",
+          "parent": "Chest"
+        },
+        {
+          "name": "Robot",
+          "parent": "ordered_slots"
+        }
+      ]
+    },
+    {
+      "category": "blend_shapes",
+      "subject": "Robot",
+      "status": "fail",
+      "detail": "Channel names; unique FBX prefixes accepted",
+      "expected": [
+        "Smile",
+        "Blink"
+      ],
+      "actual": []
+    },
+    {
+      "category": "materials",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "Ordered material slots",
+      "expected": [
+        "Mint",
+        "Graphite"
+      ],
+      "actual": [
+        "Mint",
+        "Graphite"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "VERTEX_COUNT_CHANGED",
+      "subject": "Robot",
+      "message": "Imported vertex count differs; UV, normal and material seams may split vertices.",
+      "expected": 120,
+      "actual": 360,
+      "hint": "",
+      "mesh": "Robot"
+    },
+    {
+      "severity": "error",
+      "code": "BLEND_SHAPE_MISSING",
+      "subject": "Robot",
+      "message": "Shape key did not arrive as a blend shape.",
+      "expected": "Smile",
+      "actual": [],
+      "hint": "Check FBX Apply Modifiers and Unity Import BlendShapes; inspect the source export settings.",
+      "mesh": "Robot"
+    },
+    {
+      "severity": "error",
+      "code": "BLEND_SHAPE_MISSING",
+      "subject": "Robot",
+      "message": "Shape key did not arrive as a blend shape.",
+      "expected": "Blink",
+      "actual": [],
+      "hint": "Check FBX Apply Modifiers and Unity Import BlendShapes; inspect the source export settings.",
+      "mesh": "Robot"
+    }
+  ],
+  "limitations": [
+    "Rest axis-aligned dimensions only: not orientation, handedness or pivot validation.",
+    "Bone names/parents only: not skin weights, bind poses, animation or deformation.",
+    "Shape channel presence only: not vertex deltas or expression quality.",
+    "Material slot count/names only: not face assignments, shaders, colors or textures."
+  ]
+}

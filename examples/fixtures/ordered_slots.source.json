@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "producer": "blender",
+  "producer_version": "5.2.3 LTS",
+  "asset_name": "ordered_slots",
+  "source_file": "ordered_slots.fbx",
+  "artifact_sha256": "df4b9bf93705fd3e5393d52f566b39135d0c23ed611f1b02d4a7cf232a52ff4e",
+  "units": {
+    "meters_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  "meshes": [
+    {
+      "name": "Robot",
+      "path": "Rig/Robot",
+      "bounds_size": [
+        1.0,
+        0.6000000238418579,
+        2.0
+      ],
+      "vertex_count": 120,
+      "materials": [
+        "Mint",
+        "Graphite"
+      ],
+      "blend_shapes": [
+        "Smile",
+        "Blink"
+      ],
+      "bones": [
+        {
+          "name": "Base",
+          "parent": null
+        },
+        {
+          "name": "Chest",
+          "parent": "Base"
+        },
+        {
+          "name": "Head",
+          "parent": "Chest"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "geometry_basis": "original base/basis vertices transformed to scene world space",
+    "warnings": [],
+    "scope": "structure and rest bounds only; not animation, weights, deformation, textures or shader fidelity",
+    "export_settings": {
+      "use_selection": true,
+      "global_scale": 1.0,
+      "apply_unit_scale": true,
+      "apply_scale_options": "FBX_SCALE_ALL",
+      "axis_forward": "-Z",
+      "axis_up": "Y",
+      "use_space_transform": true,
+      "bake_space_transform": false,
+      "object_types": [
+        "ARMATURE",
+        "EMPTY",
+        "MESH"
+      ],
+      "use_mesh_modifiers": false,
+      "add_leaf_bones": false,
+      "use_armature_deform_only": false,
+      "bake_anim": false,
+      "path_mode": "AUTO",
+      "embed_textures": false
+    },
+    "fixture": "Original procedural block robot; no third-party assets",
+    "intentional_pipeline_defect": null
+  }
+}

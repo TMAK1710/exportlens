@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><title>ExportLens — Review required</title>
+<style>
+:root{--bg:#10181c;--panel:#19242b;--line:#314047;--muted:#a6b8bf;--ink:#e9f2f2;--green:#8ce6c5;--red:#ffaca5;--amber:#f4d28b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif}main{max-width:1120px;margin:auto;padding:30px 36px 48px}header{display:flex;align-items:center;gap:18px;border-bottom:1px solid var(--line);padding-bottom:22px}.logo{font-size:24px;font-weight:750;letter-spacing:-1px}.mark{color:var(--green)}.tag{margin-left:auto;color:var(--muted);font-size:12px}.eyebrow{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}.hero{padding:32px 0 26px;display:flex;justify-content:space-between;gap:24px;align-items:center}h1{margin:6px 0;font-size:36px;letter-spacing:-1.1px;line-height:1.2}.hero.pass h1{color:var(--green)}.hero.fail h1{color:var(--red)}.hero.review h1{color:var(--amber)}p{margin:8px 0}.muted{color:var(--muted)}.stats{display:flex;gap:22px;text-align:center;flex-shrink:0}.stats strong{font-size:30px;display:block;line-height:1.2}.stats small{font-size:11px;color:var(--muted)}.evidence{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}.evidence>div{background:var(--panel);padding:16px 20px}.evidence strong{display:block;font-size:16px;margin:2px 0;overflow-wrap:anywhere}.section-head{display:flex;align-items:baseline;gap:15px;margin:28px 0 12px}h2{font-size:19px;margin:0}.section-head span{font-size:12px;color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.check{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;min-width:0}.check-head{display:flex;align-items:center;justify-content:space-between;gap:10px}h3{margin:5px 0 0;font-size:18px}.check>.muted{font-size:12px;min-height:20px}.badge{font-size:10px;font-weight:750;letter-spacing:.7px;border-radius:4px;padding:3px 7px;display:inline-block}.pass{color:var(--green)}.badge.pass{background:#243f38}.badge.fail,.badge.error{background:#472c2e;color:var(--red)}.badge.review,.badge.warning{background:#443c2c;color:var(--amber)}.badge.info{background:#2a3b4c;color:#b6d3ee}.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.pair small{display:block;font-size:10px;color:var(--muted);letter-spacing:1px}.pair strong{display:block;font-size:13px;font-weight:550;overflow-wrap:anywhere}details{margin-top:12px;font-size:11px;color:var(--muted)}summary{cursor:pointer}pre{font:11px/1.5 ui-monospace,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}.finding{border:1px solid var(--line);border-left:3px solid #6f8491;border-radius:7px;background:var(--panel);padding:14px 18px;margin-bottom:10px}.finding.error{border-left-color:var(--red)}.finding.warning{border-left-color:var(--amber)}.finding-top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:12px}code{font:11px ui-monospace,Consolas,monospace}.finding-values{display:flex;gap:24px;flex-wrap:wrap;font-size:12px;color:var(--muted);overflow-wrap:anywhere}.hint{font-size:12px;color:#c0d3d9;border-top:1px solid var(--line);padding-top:8px;margin-top:10px}.empty{padding:18px;border:1px solid var(--line);border-radius:8px;color:var(--green)}.scope{margin-top:28px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:12px}.scope strong{color:var(--ink)}.scope ul{padding-left:18px}footer{margin-top:20px;font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:20px}@media(max-width:750px){main{padding:20px}.hero{display:block}.stats{justify-content:flex-start;margin-top:22px}h1{font-size:30px}.grid,.evidence{grid-template-columns:1fr}.tag{display:none}}
+</style></head><body><main>
+<header><div class="logo"><span class="mark">◈</span> ExportLens</div><span class="eyebrow">Blender → Unity</span><span class="tag">LOCAL FBX AUDIT · v0.1</span></header>
+<section class="hero review"><div><div class="eyebrow">Export consistency report</div><h1>Review required</h1><p class="muted">Some evidence needs review before this capture can pass.</p></div><div class="stats"><div><strong>0</strong><small>ERRORS</small></div><div><strong>1</strong><small>REVIEW</small></div><div><strong>5</strong><small>CHECKS</small></div></div></section>
+<section class="evidence"><div><span class="eyebrow">Source · Blender 5.2.3 LTS</span><strong>cm_units</strong><span class="muted">cm_units.fbx</span></div><div><span class="eyebrow">Imported · Unity 2022.3.22f1</span><strong>cm_units</strong><span class="muted">cm_units.fbx</span></div></section>
+<div class="section-head"><h2>Measured properties</h2><span>Native units normalized to meters</span></div><section class="grid"><article class="check"><div class="check-head"><span class="eyebrow">FBX identity</span><span class="badge pass">PASS</span></div>
+<h3>FBX</h3><p class="muted">SHA-256 matches</p>
+<div class="pair"><div><small>BLENDER</small><strong>65199bcaa47d4122…d325f9b0</strong></div><div><small>UNITY</small><strong>65199bcaa47d4122…d325f9b0</strong></div></div>
+<details><summary>Inspect captured values</summary><pre>{
+  &quot;blender&quot;: &quot;65199bcaa47d41229e47b483e934f814151d75c7043ac8561ade8585d325f9b0&quot;,
+  &quot;unity&quot;: &quot;65199bcaa47d41229e47b483e934f814151d75c7043ac8561ade8585d325f9b0&quot;
+}</pre></details></article><article class="check"><div class="check-head"><span class="eyebrow">Dimensions</span><span class="badge pass">PASS</span></div>
+<h3>Robot</h3><p class="muted">X / Y / Z in meters, Unity axes</p>
+<div class="pair"><div><small>BLENDER</small><strong>1 / 2 / 0.6</strong></div><div><small>UNITY</small><strong>1 / 2 / 0.6</strong></div></div>
+<details><summary>Inspect captured values</summary><pre>{
+  &quot;blender&quot;: [
+    0.9999999776482582,
+    1.9999999552965164,
+    0.5999999865889549
+  ],
+  &quot;unity&quot;: [
+    1,
+    1.99999988,
+    0.5999999
+  ]
+}</pre></details></article><article class="check"><div class="check-head"><span class="eyebrow">Bone hierarchy</span><span class="badge pass">PASS</span></div>
+<h3>Robot</h3><p class="muted">Source bone hierarchy; import wrappers ignored</p>
+<div class="pair"><div><small>BLENDER</small><strong>3 hierarchy nodes</strong></div><div><small>UNITY</small><strong>6 hierarchy nodes</strong></div></div>
+<details><summary>Inspect captured values</summary><pre>{
+  &quot;blender&quot;: [
+    {
+      &quot;name&quot;: &quot;Base&quot;,
+      &quot;parent&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;Chest&quot;,
+      &quot;parent&quot;: &quot;Base&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Head&quot;,
+      &quot;parent&quot;: &quot;Chest&quot;
+    }
+  ],
+  &quot;unity&quot;: [
+    {
+      &quot;name&quot;: &quot;cm_units&quot;,
+      &quot;parent&quot;: null
+    },
+    {
+      &quot;name&quot;: &quot;Rig&quot;,
+      &quot;parent&quot;: &quot;cm_units&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Base&quot;,
+      &quot;parent&quot;: &quot;Rig&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Chest&quot;,
+      &quot;parent&quot;: &quot;Base&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Head&quot;,
+      &quot;parent&quot;: &quot;Chest&quot;
+    },
+    {
+      &quot;name&quot;: &quot;Robot&quot;,
+      &quot;parent&quot;: &quot;cm_units&quot;
+    }
+  ]
+}</pre></details></article><article class="check"><div class="check-head"><span class="eyebrow">Shape channels</span><span class="badge pass">PASS</span></div>
+<h3>Robot</h3><p class="muted">Channel names; unique FBX prefixes accepted</p>
+<div class="pair"><div><small>BLENDER</small><strong>Smile, Blink</strong></div><div><small>UNITY</small><strong>Smile, Blink</strong></div></div>
+<details><summary>Inspect captured values</summary><pre>{
+  &quot;blender&quot;: [
+    &quot;Smile&quot;,
+    &quot;Blink&quot;
+  ],
+  &quot;unity&quot;: [
+    &quot;Smile&quot;,
+    &quot;Blink&quot;
+  ]
+}</pre></details></article><article class="check"><div class="check-head"><span class="eyebrow">Material slots</span><span class="badge review">REVIEW</span></div>
+<h3>Robot</h3><p class="muted">Ordered material slots</p>
+<div class="pair"><div><small>BLENDER</small><strong>Mint, Graphite</strong></div><div><small>UNITY</small><strong>Graphite, Mint</strong></div></div>
+<details><summary>Inspect captured values</summary><pre>{
+  &quot;blender&quot;: [
+    &quot;Mint&quot;,
+    &quot;Graphite&quot;
+  ],
+  &quot;unity&quot;: [
+    &quot;Graphite&quot;,
+    &quot;Mint&quot;
+  ]
+}</pre></details></article></section>
+<div class="section-head"><h2>Findings</h2><span>0 errors · 1 warnings · 1 notes</span></div><section><article class="finding info"><div class="finding-top"><span class="badge info">INFO</span><code>VERTEX_COUNT_CHANGED</code><span class="muted">Robot</span></div><p>Imported vertex count differs; UV, normal and material seams may split vertices.</p><div class="finding-values"><span>Expected: 120</span><span>Actual: 360</span></div></article><article class="finding warning"><div class="finding-top"><span class="badge warning">WARNING</span><code>MATERIAL_SLOT_NAMES_CHANGED</code><span class="muted">Robot</span></div><p>Ordered material slot names changed; appearance is not evaluated.</p><div class="finding-values"><span>Expected: Mint, Graphite</span><span>Actual: Graphite, Mint</span></div><p class="hint">Review deliberate remaps or renamed imported materials.</p></article></section>
+<aside class="scope"><strong>Scope of this report</strong><ul><li>Rest axis-aligned dimensions only: not orientation, handedness or pivot validation.</li><li>Bone names/parents only: not skin weights, bind poses, animation or deformation.</li><li>Shape channel presence only: not vertex deltas or expression quality.</li><li>Material slot count/names only: not face assignments, shaders, colors or textures.</li></ul>Dimension tolerance: 0.001 m + 1.0% per source axis. A pass applies only to the properties listed above.</aside>
+<footer><span>ExportLens · Local files in, local evidence out.</span><span>Open source · No telemetry · Offline report</span></footer>
+</main></body></html>

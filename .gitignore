@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local reports and temporary editor projects; curated examples are tracked.
+/reports/
+.local/
+temp/
+tmp/
+*.log
+*.blend1
+*.blend2
+
+# Unity caches and IDE output
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+.vs/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+
+# OS/editor files and local secrets
+.DS_Store
+Thumbs.db
+*.swp
+.env
+.env.*
+!.env.example

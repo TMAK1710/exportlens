@@ -1,0 +1,107 @@
+{
+  "generator": "tools/create_fixture.py",
+  "blender": "5.2.3 LTS",
+  "tests": [
+    "addon_register_unregister",
+    "baseline_contract",
+    "physical_dimensions",
+    "export_preserves_source_data",
+    "export_restores_selection",
+    "overwrite_guard",
+    "artifact_hash_matches",
+    "subset_selection_real_fbx_round_trip"
+  ],
+  "fixtures": [
+    {
+      "variant": "good",
+      "fbx": "good.fbx",
+      "source": "good.source.json",
+      "size_m": [
+        1.0,
+        0.6,
+        2.0
+      ],
+      "sha256": "ffc9513ab12e304ae6eeef4f40e465a2343c5783bdb4da443ed0f54fec27cedd"
+    },
+    {
+      "variant": "cm_units",
+      "fbx": "cm_units.fbx",
+      "source": "cm_units.source.json",
+      "size_m": [
+        1.0,
+        0.6,
+        2.0
+      ],
+      "sha256": "65199bcaa47d41229e47b483e934f814151d75c7043ac8561ade8585d325f9b0"
+    },
+    {
+      "variant": "lost_shapes",
+      "fbx": "lost_shapes.fbx",
+      "source": "lost_shapes.source.json",
+      "size_m": [
+        1.0,
+        0.6,
+        2.0
+      ],
+      "sha256": "6483f121951eb599a155d1bf71494a869cc39af739a64ce9cb4699f14968cf09"
+    },
+    {
+      "variant": "reparented_bone",
+      "fbx": "reparented_bone.fbx",
+      "source": "reparented_bone.source.json",
+      "size_m": [
+        1.0,
+        0.6,
+        2.0
+      ],
+      "sha256": "7e3ccf1753858f486271d7e77ac13dfb691acc4f71226e8adf56ab37a7cf02d0"
+    },
+    {
+      "variant": "changed_material",
+      "fbx": "changed_material.fbx",
+      "source": "changed_material.source.json",
+      "size_m": [
+        1.0,
+        0.6,
+        2.0
+      ],
+      "sha256": "642d5ce699cccfc31c334653d559839318f8094d70f03a727105de878e616172"
+    },
+    {
+      "variant": "ordered_slots",
+      "fbx": "ordered_slots.fbx",
+      "source": "ordered_slots.source.json",
+      "size_m": [
+        1.0,
+        0.6,
+        2.0
+      ],
+      "sha256": "df4b9bf93705fd3e5393d52f566b39135d0c23ed611f1b02d4a7cf232a52ff4e"
+    },
+    {
+      "variant": "cm_ordered_slots",
+      "fbx": "cm_ordered_slots.fbx",
+      "source": "cm_ordered_slots.source.json",
+      "size_m": [
+        1.0,
+        0.6,
+        2.0
+      ],
+      "sha256": "62993adc2d2f6007bff35e0e1b19b97393c6783f8201b17167cb3940acd44522"
+    },
+    {
+      "variant": "subset_selection",
+      "fbx": "subset_selection.fbx",
+      "source": "subset_selection.source.json",
+      "size_m": [
+        1.0,
+        0.6,
+        2.0
+      ],
+      "sha256": "aee231da1c88901b6d7777aebe350985caabe5ea1bf55f75b90c0ae19f145ada",
+      "round_trip_meshes": [
+        "Robot"
+      ]
+    }
+  ]
+}

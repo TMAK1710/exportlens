@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "producer": "unity",
+  "producer_version": "2022.3.22f1",
+  "asset_name": "changed_material",
+  "source_file": "changed_material.fbx",
+  "artifact_sha256": "642d5ce699cccfc31c334653d559839318f8094d70f03a727105de878e616172",
+  "units": {"meters_per_unit": 1, "up_axis": "Y"},
+  "meshes": [
+    {"name": "Robot", "path": "changed_material/Robot", "bounds_size": [1, 1.99999988, 0.6], "vertex_count": 360, "materials": ["Graphite_Replaced", "Mint"], "blend_shapes": ["Smile", "Blink"], "bones": [{"name": "changed_material", "parent": null}, {"name": "Rig", "parent": "changed_material"}, {"name": "Base", "parent": "Rig"}, {"name": "Chest", "parent": "Base"}, {"name": "Head", "parent": "Chest"}, {"name": "Robot", "parent": "changed_material"}]}
+  ],
+  "metadata": {
+    "collector": "ExportLens 0.1.0",
+    "bounds_method": "rest_mesh_vertices_world_matrix",
+    "mesh_name_source": "renderer_game_object_name",
+    "import_settings": {"global_scale": 1, "file_scale": 1, "use_file_scale": true, "import_blend_shapes": true, "optimize_game_objects": false, "bake_axis_conversion": false, "animation_type": "Generic"}
+  }
+}

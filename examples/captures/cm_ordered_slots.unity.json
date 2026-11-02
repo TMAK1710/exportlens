@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "producer": "unity",
+  "producer_version": "2022.3.22f1",
+  "asset_name": "cm_ordered_slots",
+  "source_file": "cm_ordered_slots.fbx",
+  "artifact_sha256": "62993adc2d2f6007bff35e0e1b19b97393c6783f8201b17167cb3940acd44522",
+  "units": {"meters_per_unit": 1, "up_axis": "Y"},
+  "meshes": [
+    {"name": "Robot", "path": "cm_ordered_slots/Robot", "bounds_size": [1, 2, 0.5999999], "vertex_count": 360, "materials": ["Mint", "Graphite"], "blend_shapes": ["Smile", "Blink"], "bones": [{"name": "cm_ordered_slots", "parent": null}, {"name": "Rig", "parent": "cm_ordered_slots"}, {"name": "Base", "parent": "Rig"}, {"name": "Chest", "parent": "Base"}, {"name": "Head", "parent": "Chest"}, {"name": "Robot", "parent": "cm_ordered_slots"}]}
+  ],
+  "metadata": {
+    "collector": "ExportLens 0.1.0",
+    "bounds_method": "rest_mesh_vertices_world_matrix",
+    "mesh_name_source": "renderer_game_object_name",
+    "import_settings": {"global_scale": 1, "file_scale": 0.01, "use_file_scale": true, "import_blend_shapes": true, "optimize_game_objects": false, "bake_axis_conversion": false, "animation_type": "Generic"}
+  }
+}

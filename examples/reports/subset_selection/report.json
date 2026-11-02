@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "info": 1,
+    "checks": 5
+  },
+  "source": {
+    "producer": "blender",
+    "producer_version": "5.2.3 LTS",
+    "asset_name": "subset_selection",
+    "source_file": "subset_selection.fbx",
+    "artifact_sha256": "aee231da1c88901b6d7777aebe350985caabe5ea1bf55f75b90c0ae19f145ada"
+  },
+  "target": {
+    "producer": "unity",
+    "producer_version": "2022.3.22f1",
+    "asset_name": "subset_selection",
+    "source_file": "subset_selection.fbx",
+    "artifact_sha256": "aee231da1c88901b6d7777aebe350985caabe5ea1bf55f75b90c0ae19f145ada"
+  },
+  "tolerances": {
+    "absolute_m": 0.001,
+    "relative": 0.01
+  },
+  "checks": [
+    {
+      "category": "identity",
+      "subject": "FBX",
+      "status": "pass",
+      "detail": "SHA-256 matches",
+      "expected": "aee231da1c88901b6d7777aebe350985caabe5ea1bf55f75b90c0ae19f145ada",
+      "actual": "aee231da1c88901b6d7777aebe350985caabe5ea1bf55f75b90c0ae19f145ada"
+    },
+    {
+      "category": "dimensions",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "X / Y / Z in meters, Unity axes",
+      "expected": [
+        1.0,
+        2.0,
+        0.6000000238418579
+      ],
+      "actual": [
+        1,
+        2,
+        0.6
+      ]
+    },
+    {
+      "category": "bones",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "Source bone hierarchy; import wrappers ignored",
+      "expected": [
+        {
+          "name": "Base",
+          "parent": null
+        },
+        {
+          "name": "Chest",
+          "parent": "Base"
+        },
+        {
+          "name": "Head",
+          "parent": "Chest"
+        }
+      ],
+      "actual": [
+        {
+          "name": "subset_selection",
+          "parent": null
+        },
+        {
+          "name": "Rig",
+          "parent": "subset_selection"
+        },
+        {
+          "name": "Base",
+          "parent": "Rig"
+        },
+        {
+          "name": "Chest",
+          "parent": "Base"
+        },
+        {
+          "name": "Head",
+          "parent": "Chest"
+        },
+        {
+          "name": "Robot",
+          "parent": "subset_selection"
+        }
+      ]
+    },
+    {
+      "category": "blend_shapes",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "Channel names; unique FBX prefixes accepted",
+      "expected": [
+        "Smile",
+        "Blink"
+      ],
+      "actual": [
+        "Smile",
+        "Blink"
+      ]
+    },
+    {
+      "category": "materials",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "Ordered material slots",
+      "expected": [
+        "Mint",
+        "Graphite"
+      ],
+      "actual": [
+        "Mint",
+        "Graphite"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "VERTEX_COUNT_CHANGED",
+      "subject": "Robot",
+      "message": "Imported vertex count differs; UV, normal and material seams may split vertices.",
+      "expected": 120,
+      "actual": 360,
+      "hint": "",
+      "mesh": "Robot"
+    }
+  ],
+  "limitations": [
+    "Rest axis-aligned dimensions only: not orientation, handedness or pivot validation.",
+    "Bone names/parents only: not skin weights, bind poses, animation or deformation.",
+    "Shape channel presence only: not vertex deltas or expression quality.",
+    "Material slot count/names only: not face assignments, shaders, colors or textures."
+  ]
+}

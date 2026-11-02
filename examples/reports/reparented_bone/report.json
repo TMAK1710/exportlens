@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "status": "fail",
+  "summary": {
+    "errors": 1,
+    "warnings": 1,
+    "info": 1,
+    "checks": 5
+  },
+  "source": {
+    "producer": "blender",
+    "producer_version": "5.2.3 LTS",
+    "asset_name": "reparented_bone",
+    "source_file": "reparented_bone.fbx",
+    "artifact_sha256": "7e3ccf1753858f486271d7e77ac13dfb691acc4f71226e8adf56ab37a7cf02d0"
+  },
+  "target": {
+    "producer": "unity",
+    "producer_version": "2022.3.22f1",
+    "asset_name": "reparented_bone",
+    "source_file": "reparented_bone.fbx",
+    "artifact_sha256": "7e3ccf1753858f486271d7e77ac13dfb691acc4f71226e8adf56ab37a7cf02d0"
+  },
+  "tolerances": {
+    "absolute_m": 0.001,
+    "relative": 0.01
+  },
+  "checks": [
+    {
+      "category": "identity",
+      "subject": "FBX",
+      "status": "pass",
+      "detail": "SHA-256 matches",
+      "expected": "7e3ccf1753858f486271d7e77ac13dfb691acc4f71226e8adf56ab37a7cf02d0",
+      "actual": "7e3ccf1753858f486271d7e77ac13dfb691acc4f71226e8adf56ab37a7cf02d0"
+    },
+    {
+      "category": "dimensions",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "X / Y / Z in meters, Unity axes",
+      "expected": [
+        1.0,
+        2.0,
+        0.6000000238418579
+      ],
+      "actual": [
+        1,
+        1.99999988,
+        0.6
+      ]
+    },
+    {
+      "category": "bones",
+      "subject": "Robot",
+      "status": "fail",
+      "detail": "Source bone hierarchy; import wrappers ignored",
+      "expected": [
+        {
+          "name": "Base",
+          "parent": null
+        },
+        {
+          "name": "Chest",
+          "parent": "Base"
+        },
+        {
+          "name": "Head",
+          "parent": "Chest"
+        }
+      ],
+      "actual": [
+        {
+          "name": "reparented_bone",
+          "parent": null
+        },
+        {
+          "name": "Rig",
+          "parent": "reparented_bone"
+        },
+        {
+          "name": "Base",
+          "parent": "Rig"
+        },
+        {
+          "name": "Chest",
+          "parent": "Base"
+        },
+        {
+          "name": "Head",
+          "parent": "Base"
+        },
+        {
+          "name": "Robot",
+          "parent": "reparented_bone"
+        }
+      ]
+    },
+    {
+      "category": "blend_shapes",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "Channel names; unique FBX prefixes accepted",
+      "expected": [
+        "Smile",
+        "Blink"
+      ],
+      "actual": [
+        "Smile",
+        "Blink"
+      ]
+    },
+    {
+      "category": "materials",
+      "subject": "Robot",
+      "status": "review",
+      "detail": "Ordered material slots",
+      "expected": [
+        "Mint",
+        "Graphite"
+      ],
+      "actual": [
+        "Graphite",
+        "Mint"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "VERTEX_COUNT_CHANGED",
+      "subject": "Robot",
+      "message": "Imported vertex count differs; UV, normal and material seams may split vertices.",
+      "expected": 120,
+      "actual": 360,
+      "hint": "",
+      "mesh": "Robot"
+    },
+    {
+      "severity": "error",
+      "code": "BONE_PARENT_CHANGED",
+      "subject": "Robot/Head",
+      "message": "Bone parent changed (non-bone import wrappers are ignored).",
+      "expected": "Chest",
+      "actual": "Base",
+      "hint": "",
+      "mesh": "Robot"
+    },
+    {
+      "severity": "warning",
+      "code": "MATERIAL_SLOT_NAMES_CHANGED",
+      "subject": "Robot",
+      "message": "Ordered material slot names changed; appearance is not evaluated.",
+      "expected": [
+        "Mint",
+        "Graphite"
+      ],
+      "actual": [
+        "Graphite",
+        "Mint"
+      ],
+      "hint": "Review deliberate remaps or renamed imported materials.",
+      "mesh": "Robot"
+    }
+  ],
+  "limitations": [
+    "Rest axis-aligned dimensions only: not orientation, handedness or pivot validation.",
+    "Bone names/parents only: not skin weights, bind poses, animation or deformation.",
+    "Shape channel presence only: not vertex deltas or expression quality.",
+    "Material slot count/names only: not face assignments, shaders, colors or textures."
+  ]
+}

@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.png -text
+*.fbx -text
+*.blend -text
+# Unity-generated empty YAML values conventionally include a trailing space.
+*.meta whitespace=-blank-at-eol

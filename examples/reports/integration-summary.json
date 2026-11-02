@@ -1,0 +1,104 @@
+{
+  "success": true,
+  "cases": [
+    {
+      "case": "good",
+      "status": "review",
+      "codes": [
+        "MATERIAL_SLOT_NAMES_CHANGED",
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    },
+    {
+      "case": "cm_units",
+      "status": "review",
+      "codes": [
+        "MATERIAL_SLOT_NAMES_CHANGED",
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    },
+    {
+      "case": "ordered_slots",
+      "status": "pass",
+      "codes": [
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    },
+    {
+      "case": "cm_ordered_slots",
+      "status": "pass",
+      "codes": [
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    },
+    {
+      "case": "subset_selection",
+      "status": "pass",
+      "codes": [
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    },
+    {
+      "case": "lost_shapes",
+      "status": "fail",
+      "codes": [
+        "BLEND_SHAPE_MISSING",
+        "MATERIAL_SLOT_NAMES_CHANGED",
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    },
+    {
+      "case": "reparented_bone",
+      "status": "fail",
+      "codes": [
+        "BONE_PARENT_CHANGED",
+        "MATERIAL_SLOT_NAMES_CHANGED",
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    },
+    {
+      "case": "changed_material",
+      "status": "review",
+      "codes": [
+        "MATERIAL_SLOT_NAMES_CHANGED",
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    },
+    {
+      "case": "wrong_scale",
+      "status": "fail",
+      "codes": [
+        "BOUNDS_SIZE_CHANGED",
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    },
+    {
+      "case": "missing_blend_shapes",
+      "status": "fail",
+      "codes": [
+        "BLEND_SHAPE_MISSING",
+        "VERTEX_COUNT_CHANGED"
+      ],
+      "blender_version": "5.2.3 LTS",
+      "unity_version": "2022.3.22f1"
+    }
+  ]
+}

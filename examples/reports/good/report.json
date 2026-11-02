@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "status": "review",
+  "summary": {
+    "errors": 0,
+    "warnings": 1,
+    "info": 1,
+    "checks": 5
+  },
+  "source": {
+    "producer": "blender",
+    "producer_version": "5.2.3 LTS",
+    "asset_name": "good",
+    "source_file": "good.fbx",
+    "artifact_sha256": "ffc9513ab12e304ae6eeef4f40e465a2343c5783bdb4da443ed0f54fec27cedd"
+  },
+  "target": {
+    "producer": "unity",
+    "producer_version": "2022.3.22f1",
+    "asset_name": "good",
+    "source_file": "good.fbx",
+    "artifact_sha256": "ffc9513ab12e304ae6eeef4f40e465a2343c5783bdb4da443ed0f54fec27cedd"
+  },
+  "tolerances": {
+    "absolute_m": 0.001,
+    "relative": 0.01
+  },
+  "checks": [
+    {
+      "category": "identity",
+      "subject": "FBX",
+      "status": "pass",
+      "detail": "SHA-256 matches",
+      "expected": "ffc9513ab12e304ae6eeef4f40e465a2343c5783bdb4da443ed0f54fec27cedd",
+      "actual": "ffc9513ab12e304ae6eeef4f40e465a2343c5783bdb4da443ed0f54fec27cedd"
+    },
+    {
+      "category": "dimensions",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "X / Y / Z in meters, Unity axes",
+      "expected": [
+        1.0,
+        2.0,
+        0.6000000238418579
+      ],
+      "actual": [
+        1,
+        1.99999988,
+        0.6
+      ]
+    },
+    {
+      "category": "bones",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "Source bone hierarchy; import wrappers ignored",
+      "expected": [
+        {
+          "name": "Base",
+          "parent": null
+        },
+        {
+          "name": "Chest",
+          "parent": "Base"
+        },
+        {
+          "name": "Head",
+          "parent": "Chest"
+        }
+      ],
+      "actual": [
+        {
+          "name": "good",
+          "parent": null
+        },
+        {
+          "name": "Rig",
+          "parent": "good"
+        },
+        {
+          "name": "Base",
+          "parent": "Rig"
+        },
+        {
+          "name": "Chest",
+          "parent": "Base"
+        },
+        {
+          "name": "Head",
+          "parent": "Chest"
+        },
+        {
+          "name": "Robot",
+          "parent": "good"
+        }
+      ]
+    },
+    {
+      "category": "blend_shapes",
+      "subject": "Robot",
+      "status": "pass",
+      "detail": "Channel names; unique FBX prefixes accepted",
+      "expected": [
+        "Smile",
+        "Blink"
+      ],
+      "actual": [
+        "Smile",
+        "Blink"
+      ]
+    },
+    {
+      "category": "materials",
+      "subject": "Robot",
+      "status": "review",
+      "detail": "Ordered material slots",
+      "expected": [
+        "Mint",
+        "Graphite"
+      ],
+      "actual": [
+        "Graphite",
+        "Mint"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "code": "VERTEX_COUNT_CHANGED",
+      "subject": "Robot",
+      "message": "Imported vertex count differs; UV, normal and material seams may split vertices.",
+      "expected": 120,
+      "actual": 360,
+      "hint": "",
+      "mesh": "Robot"
+    },
+    {
+      "severity": "warning",
+      "code": "MATERIAL_SLOT_NAMES_CHANGED",
+      "subject": "Robot",
+      "message": "Ordered material slot names changed; appearance is not evaluated.",
+      "expected": [
+        "Mint",
+        "Graphite"
+      ],
+      "actual": [
+        "Graphite",
+        "Mint"
+      ],
+      "hint": "Review deliberate remaps or renamed imported materials.",
+      "mesh": "Robot"
+    }
+  ],
+  "limitations": [
+    "Rest axis-aligned dimensions only: not orientation, handedness or pivot validation.",
+    "Bone names/parents only: not skin weights, bind poses, animation or deformation.",
+    "Shape channel presence only: not vertex deltas or expression quality.",
+    "Material slot count/names only: not face assignments, shaders, colors or textures."
+  ]
+}

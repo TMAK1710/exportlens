@@ -1,0 +1,10 @@
+{
+  "name": "com.exportlens.editor",
+  "version": "0.1.0",
+  "displayName": "ExportLens",
+  "description": "Capture an imported FBX snapshot for Blender-to-Unity consistency checks.",
+  "unity": "2022.3",
+  "license": "MIT",
+  "repository": {"type": "git", "url": "https://github.com/TMAK1710/exportlens.git", "directory": "unity"},
+  "keywords": ["fbx", "blender", "validation", "editor"]
+}

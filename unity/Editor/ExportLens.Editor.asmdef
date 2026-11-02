@@ -1,0 +1,6 @@
+{
+  "name": "ExportLens.Editor",
+  "rootNamespace": "ExportLens.Editor",
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

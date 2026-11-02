@@ -1,0 +1,87 @@
+{
+  "unity_version": "2022.3.22f1",
+  "success": true,
+  "description": "Actual imported FBX capture invariants; private assets and raw machine logs excluded.",
+  "captures": [
+    {
+      "fixture": "changed_material",
+      "asset_path": "Assets/ExportLensFixtures/changed_material/changed_material.fbx",
+      "snapshot": "changed_material.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    },
+    {
+      "fixture": "cm_ordered_slots",
+      "asset_path": "Assets/ExportLensFixtures/cm_ordered_slots/cm_ordered_slots.fbx",
+      "snapshot": "cm_ordered_slots.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    },
+    {
+      "fixture": "cm_units",
+      "asset_path": "Assets/ExportLensFixtures/cm_units/cm_units.fbx",
+      "snapshot": "cm_units.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    },
+    {
+      "fixture": "good",
+      "asset_path": "Assets/ExportLensFixtures/good/good.fbx",
+      "snapshot": "good.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    },
+    {
+      "fixture": "lost_shapes",
+      "asset_path": "Assets/ExportLensFixtures/lost_shapes/lost_shapes.fbx",
+      "snapshot": "lost_shapes.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    },
+    {
+      "fixture": "ordered_slots",
+      "asset_path": "Assets/ExportLensFixtures/ordered_slots/ordered_slots.fbx",
+      "snapshot": "ordered_slots.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    },
+    {
+      "fixture": "reparented_bone",
+      "asset_path": "Assets/ExportLensFixtures/reparented_bone/reparented_bone.fbx",
+      "snapshot": "reparented_bone.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    },
+    {
+      "fixture": "wrong_scale",
+      "asset_path": "Assets/ExportLensFixtures/wrong_scale/ordered_slots.fbx",
+      "snapshot": "wrong_scale.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    },
+    {
+      "fixture": "missing_blend_shapes",
+      "asset_path": "Assets/ExportLensFixtures/missing_blend_shapes/ordered_slots.fbx",
+      "snapshot": "missing_blend_shapes.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    },
+    {
+      "fixture": "subset_selection",
+      "asset_path": "Assets/ExportLensFixtures/subset_selection/subset_selection.fbx",
+      "snapshot": "subset_selection.unity.json",
+      "mesh_count": 1,
+      "importer_unchanged": true,
+      "active_scene_unchanged": true
+    }
+  ]
+}
